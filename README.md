@@ -8,14 +8,31 @@ Overview
 
 ---
 
+[//]: # (Image References)
+
+[video]: ./images/particle_output.gif "Video showing tracking performance"
+[final_result]: ./images/particle_sim_result.PNG "Final Result"
+[eq_1]: ./images/equation_1.gif "Equation 1"
+[eq_2]: ./images/equation_2.gif "Equation 2"
+[eq_3]: ./images/equation_3.gif "Equation 3"
+[eq_4]: ./images/equation_4.gif "Equation 4"
+
+**PROJECT DESCRIPTION**
+
 In this project I implemented a PID controller in C++ to maneuver the vehicle around a lake race track in a simulated environment. PID stands for Proportional Integral Derivative Controller. PID controller are popular for applications involving closed loop systems with continuous control. 
 
 The Role of the PID controller is to estimate a corrective value based on cross track error (CTE). The simulator will provide the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle. CTE is deviation from the center or desired trajectory. 
 
-- Praportional: Directly praportional to CTE value
-- Integral: Relates to cumilative sum of CTE values, used to counter systematic bias
-- Derivative: Relates to difference between the current and previous CTE, helps reduce overshooting as it limits the correction once closer to goal
+- **Praportional**: Directly praportional to CTE value
+- **Integral**: Relates to cumilative sum of CTE values, used to counter systematic bias
+- **Derivative**: Relates to difference between the current and previous CTE, helps reduce overshooting as it limits the correction once closer to goal
 
+**Project Goals**
+
+The goals / steps of this project are the following:
+- Build a PID controller in C++
+- Tune controller coefficients/hyperparameters (Kp, Ki, Kd)
+- Vehicle succesfully drives a lap around the track without tires leaving the driveable portions
 
 ## Dependencies
 
