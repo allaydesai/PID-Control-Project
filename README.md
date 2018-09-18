@@ -83,12 +83,15 @@ Lower: Less reaction time causing severe oscillations
 
 The vehicle in the simulator did not appear to have any bias hence this parameter was left as a very small value close to zero.  
 
+I performed parameter tuning manually by first starting with the values found in lesson and then I begin tweaking the Kp value with a goal of being adequately reactive to the error, I then tweaked the Kd componenet to reduce the ampount of oscillation and overshooting. The key here was being able to make the turn with desired value. 
+
 Final chosen parameters:
 
+|    | Value   |
 |----|---------|
 | Kp | 0.1     |
 | Ki | 0.003   |
-| Kp | 3.0     |
+| Kd | 3.0     |
 
 
 ## Dependencies
