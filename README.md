@@ -10,12 +10,11 @@ Overview
 
 [//]: # (Image References)
 
-[video]: ./images/particle_output.gif "Video showing tracking performance"
-[final_result]: ./images/particle_sim_result.PNG "Final Result"
-[eq_1]: ./images/equation_1.gif "Equation 1"
-[eq_2]: ./images/equation_2.gif "Equation 2"
-[eq_3]: ./images/equation_3.gif "Equation 3"
-[eq_4]: ./images/equation_4.gif "Equation 4"
+[video]: ./results/result_video.gif "Video showing loop around track"
+[video_low_kp]: ./results/low_Kp.gif "Video with low Kp"
+[video_high_kp]: ./results/High_Kp.gif "Video with high Kp"
+[Video_low_kd]: ./results/low_Kd.gif "Video with low Kd"
+[Video_high_kd]: ./results/high_kd_2.gif "Video with high Kd"
 
 **PROJECT DESCRIPTION**
 
@@ -26,6 +25,8 @@ The Role of the PID controller is to estimate a corrective value based on cross 
 - **Praportional**: Directly praportional to CTE value
 - **Integral**: Relates to cumilative sum of CTE values, used to counter systematic bias
 - **Derivative**: Relates to difference between the current and previous CTE, helps reduce overshooting as it limits the correction once closer to goal
+
+![alt text][video]
 
 **Project Goals**
 
@@ -69,7 +70,11 @@ Reactiveness to error.
 
 Higher: Will cause vehicle to overshoot and oscillate quickly.
 
+![alt text][video_high_kp]
+
 Lower: The time difference between oscialltion will increase and the vehicle will be less reactive to errors  
+
+![alt text][video_low_kp]
 
 **Proportional (Kd)**
 
@@ -77,11 +82,15 @@ Scalling correction based on magnitude of error.
 
 Higher: Increases reaction time, having a smoothing effect and reducing aggresive oscillations
 
+![alt text][video_high_kd]
+
 Lower: Less reaction time causing severe oscillations
+
+![alt text][Video_low_kd]
 
 **Proportional (Ki)**
 
-The vehicle in the simulator did not appear to have any bias hence this parameter was left as a very small value close to zero.  
+The vehicle in the simulator did not appear to have any bias hence this parameter was left as a very small value close to zero. But I did find that having a small value helped the car with certain turns. Maybe because the track is left turn biased, having only 1 right turn.  
 
 I performed parameter tuning manually by first starting with the values found in lesson and then I begin tweaking the Kp value with a goal of being adequately reactive to the error, I then tweaked the Kd componenet to reduce the ampount of oscillation and overshooting. The key here was being able to make the turn with desired value. 
 
